@@ -3,23 +3,23 @@ using UnityEngine.UI;
 using TMPro;
 public class Manager : MonoBehaviour
 {
-    [SerializeField] private GameObject[] widmillsArr;
-    public TMP_Text keyInput;
-     [SerializeField] private Light[] lampLight; // Assign in Inspector
-    [SerializeField] private float maxLightIntensity = 1f; // Maximum lamp brightness
+    [SerializeField] private GameObject[]windmillsArr; //Array für all meine Windmühlen
+    public TMP_Text keyInput; //space pressed tmp
+     private float maxSpeed = 255f;
     [SerializeField] private Slider[] sliders;
+    private float[] speeds = new float[3];
     [SerializeField] private GameObject colorBoard;
+    private Renderer boardRenderer;
+   [SerializeField] private Light[] windmillLights; // Array für die drei Lichter
 
     private int currentWindmill = 0;
-    private float[] speeds = new float[3];
     private bool[] isLocked = new bool[3];
-    private float maxSpeed = 255f;
 
     private void Start()
     {
-       
+        boardRenderer = colorBoard.GetComponent<Renderer>();
+        speeds[0] = 0f;
     }
-
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
@@ -31,7 +31,7 @@ public class Manager : MonoBehaviour
         {
             keyInput.text = "";
         }
-        if (currentWindmill < widmillsArr.Length && !isLocked[currentWindmill])
+        if (currentWindmill <windmillsArr.Length && !isLocked[currentWindmill])
         {
             if (Input.GetKey(KeyCode.Space))
             {
@@ -43,15 +43,14 @@ public class Manager : MonoBehaviour
             }
         }
         Rotate();
+        UpdateLights();
     }
-
     private void Increase(float deltaTime)
     {
         float newSpeed = Mathf.Clamp(speeds[currentWindmill] + (deltaTime * 100f), 0, maxSpeed);
         speeds[currentWindmill] = newSpeed;
         sliders[currentWindmill].value = newSpeed;
     }
-
     private void Decrease(float deltaTime)
     {
         if (!isLocked[currentWindmill])
@@ -61,20 +60,30 @@ public class Manager : MonoBehaviour
             sliders[currentWindmill].value = newSpeed;
         }
     }
-
     private void Rotate()
     {
-        for (int i = 0; i < widmillsArr.Length; i++)
+        for (int i = 0; i <windmillsArr.Length; i++)
         {
             if (speeds[i] > 0)
             {
-                widmillsArr[i].transform.Rotate(Vector3.forward * speeds[i] * Time.deltaTime);
+               windmillsArr[i].transform.Rotate(Vector3.forward * speeds[i] * Time.deltaTime);
             }
         }
     }
-    
+    private void UpdateLights()
+{
+    for (int i = 0; i < windmillLights.Length; i++)
+    {
+        if (windmillLights[i] != null)
+        {
+            // Berechne die neue Intensität (zwischen 0.2 und 3.0, abhängig von der Geschwindigkeit)
+            float intensity = Mathf.Lerp(0.2f, 3f, speeds[i] / maxSpeed);
+            windmillLights[i].intensity = intensity;
+        }
+    }
+}
 
-    public void Lock(int index)
+     public void Lock(int index)
     {
         if (!isLocked[index])
         {
@@ -82,6 +91,21 @@ public class Manager : MonoBehaviour
             currentWindmill++;
         }
     }
+    public void ColorBoard()
+{
+    float redValue = Mathf.Clamp(speeds[0] / 255f, 0, 1);
+    float greenValue = Mathf.Clamp(speeds[1] / 255f, 0, 1);
+    float blueValue = Mathf.Clamp(speeds[2] / 255f, 0, 1);
+    Debug.Log(speeds[0] + "Speeds 0");
+    Debug.Log(redValue + "Red");
+    
+    Color newColor = new Color(redValue, greenValue, blueValue);
+
+    // Ändere die Farbe des Boards
+    boardRenderer.material.color = newColor; 
+
+}
+
 
 }
 

@@ -910,7 +910,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 320318920}
-  - component: {fileID: 320318921}
   m_Layer: 0
   m_Name: RotorHub
   m_TagString: Untagged
@@ -934,25 +933,6 @@ Transform:
   - {fileID: 346694763}
   m_Father: {fileID: 2011486661}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &320318921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 320318919}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 743aca68318add04f90cc562f927cc60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lampLight: {fileID: 2026497375}
-  maxLightIntensity: 1
-  speedSlider: {fileID: 143500541}
-  maxRotationSpeed: 300
-  acceleration: 50
-  deceleration: 30
-  currentSpeed: 0
 --- !u!1 &336711941
 GameObject:
   m_ObjectHideFlags: 0
@@ -1579,8 +1559,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 463840562}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 2.05}
-  m_LocalScale: {x: 0.038409855, y: 0.20993598, z: 0.7101374}
+  m_LocalPosition: {x: 0, y: 0, z: -48}
+  m_LocalScale: {x: 0.113332115, y: 0.20993598, z: 0.7101374}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1659912424}
@@ -1588,8 +1568,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 58, y: -13}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 297, y: -351}
+  m_SizeDelta: {x: 245.3556, y: 187.048}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &463840564
 MonoBehaviour:
@@ -1643,6 +1623,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 489052257}
+        m_TargetAssemblyTypeName: Manager, Assembly-CSharp
+        m_MethodName: ColorBoard
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1894,21 +1886,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08b6d87c1e7eae947ae12e837663f7c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  widmillsArr:
+  windmillsArr:
   - {fileID: 2129420140}
   - {fileID: 320318919}
   - {fileID: 1326432885}
   keyInput: {fileID: 1562404975}
-  lampLight:
-  - {fileID: 2043787823}
-  - {fileID: 2026497375}
-  - {fileID: 1313475422}
-  maxLightIntensity: 0
   sliders:
   - {fileID: 100074321}
   - {fileID: 143500541}
   - {fileID: 580952904}
   colorBoard: {fileID: 1918172435}
+  windmillLights:
+  - {fileID: 2043787823}
+  - {fileID: 2026497375}
+  - {fileID: 1313475422}
 --- !u!4 &489052258
 Transform:
   m_ObjectHideFlags: 0
@@ -2102,7 +2093,6 @@ GameObject:
   - component: {fileID: 586832085}
   - component: {fileID: 586832084}
   - component: {fileID: 586832083}
-  - component: {fileID: 586832086}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -2118,8 +2108,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 586832081}
   m_LocalRotation: {x: -0, y: -0.007739579, z: -0, w: 0.9999701}
-  m_LocalPosition: {x: 0, y: 0, z: 1.58}
-  m_LocalScale: {x: 0.04706602, y: 0.20834063, z: 2.0949576}
+  m_LocalPosition: {x: 0, y: 0, z: -48.469997}
+  m_LocalScale: {x: 0.138873, y: 0.20834063, z: 2.0949576}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1493765131}
@@ -2127,8 +2117,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: -0.887, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -30.900005, y: -13.4}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -235.54997, y: -353.4941}
+  m_SizeDelta: {x: 245.3556, y: 187.048}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &586832083
 MonoBehaviour:
@@ -2151,7 +2141,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.0754717, g: 0.07381037, b: 0.07381037, a: 1}
+    m_NormalColor: {r: 0.066037714, g: 0.061469067, b: 0.061469067, a: 1}
     m_HighlightedColor: {r: 0.9811321, g: 0.061706316, b: 0.061706316, a: 1}
     m_PressedColor: {r: 0.6132076, g: 0.61127925, b: 0.61127925, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -2178,6 +2168,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: Manager, Assembly-CSharp
         m_MethodName: Lock
         m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 489052257}
+        m_TargetAssemblyTypeName: Manager, Assembly-CSharp
+        m_MethodName: ColorBoard
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2224,19 +2226,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 586832081}
   m_CullTransparentMesh: 1
---- !u!114 &586832086
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 586832081}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c3cd61443ae58b44be86a749be23ce4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationSpeed: 100
 --- !u!1 &588953912
 GameObject:
   m_ObjectHideFlags: 0
@@ -4099,7 +4088,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1326432886}
-  - component: {fileID: 1326432887}
   m_Layer: 0
   m_Name: RotorHub
   m_TagString: Untagged
@@ -4123,25 +4111,6 @@ Transform:
   - {fileID: 303583146}
   m_Father: {fileID: 1747523142}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1326432887
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1326432885}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 743aca68318add04f90cc562f927cc60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lampLight: {fileID: 1313475422}
-  maxLightIntensity: 1
-  speedSlider: {fileID: 580952904}
-  maxRotationSpeed: 300
-  acceleration: 50
-  deceleration: 30
-  currentSpeed: 0
 --- !u!1 &1328718726
 GameObject:
   m_ObjectHideFlags: 0
@@ -4766,8 +4735,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.34948123, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 21, y: 11}
-  m_SizeDelta: {x: 120, y: 50}
+  m_AnchoredPosition: {x: -0.7999878, y: 25.4}
+  m_SizeDelta: {x: 126.9, y: 30.0954}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1562404975
 MonoBehaviour:
@@ -4935,7 +4904,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -6.04, y: -1.875}
+  m_AnchoredPosition: {x: -6.0400314, y: -1.875}
   m_SizeDelta: {x: -12.07, y: -3.75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1659912425
@@ -5199,8 +5168,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1872779877}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 2}
-  m_LocalScale: {x: 0.0402441, y: 0.23460503, z: 1.8269889}
+  m_LocalPosition: {x: 0, y: 0, z: -48.05}
+  m_LocalScale: {x: 0.11874423, y: 0.23460503, z: 1.8269889}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 643352003}
@@ -5208,8 +5177,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 13.399994, y: -12.62}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 35.023026, y: -362.57703}
+  m_SizeDelta: {x: 245.3556, y: 187.048}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1872779879
 MonoBehaviour:
@@ -5263,6 +5232,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 489052257}
+        m_TargetAssemblyTypeName: Manager, Assembly-CSharp
+        m_MethodName: ColorBoard
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -6179,7 +6160,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2129420141}
-  - component: {fileID: 2129420142}
   m_Layer: 0
   m_Name: RotorHub
   m_TagString: Untagged
@@ -6203,25 +6183,6 @@ Transform:
   - {fileID: 255959895}
   m_Father: {fileID: 1579448354}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2129420142
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2129420140}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 743aca68318add04f90cc562f927cc60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lampLight: {fileID: 2043787823}
-  maxLightIntensity: 1
-  speedSlider: {fileID: 100074321}
-  maxRotationSpeed: 300
-  acceleration: 50
-  deceleration: 30
-  currentSpeed: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
