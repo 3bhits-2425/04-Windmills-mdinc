@@ -22,3 +22,6 @@
 ## 🏗 **Mehrere Objekte verwalten & Interaktion zwischen Objekten**
 - [x] **Mehrere Windmühlen in einer Szene**: Jede hat eigene Steuerung, aber dasselbe Skript.
 - [ ] **Unterschiedliche Zustände pro Windmühle**: Eine ist aktiv steuerbar, andere nicht.
+- [ ] **UML DIAGRAMM**
+      ![image](https://github.com/user-attachments/assets/1619ca45-1e6c-488e-ac22-aa71cbeead85)
+
