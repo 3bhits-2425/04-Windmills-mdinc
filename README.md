@@ -16,12 +16,12 @@
 - [x] **Mehrere Windmühlen unabhängig steuerbar machen**: Nur das aktuell ausgewählte Windrad soll auf `Space` reagieren.
 
 ## 🖥 **UI-Elemente & Visualisierung von Variablen**
-- [ ] **Einbindung eines `Slider`-Elements**: Anzeige der aktuellen Geschwindigkeit (0–255).
+- [x] **Einbindung eines `Slider`-Elements**: ohne Anzeige der aktuellen Geschwindigkeit (0–255).
 - [x] **Werteskalierung (`Mathf.Lerp`)**: Geschwindigkeit in eine Lichtintensität umwandeln.
 
 ## 🏗 **Mehrere Objekte verwalten & Interaktion zwischen Objekten**
 - [x] **Mehrere Windmühlen in einer Szene**: Jede hat eigene Steuerung, aber dasselbe Skript.
 - [ ] **Unterschiedliche Zustände pro Windmühle**: Eine ist aktiv steuerbar, andere nicht.
-- [ ] **UML DIAGRAMM**
+- [x] **UML DIAGRAMM**
       ![image](https://github.com/user-attachments/assets/1619ca45-1e6c-488e-ac22-aa71cbeead85)
 
