@@ -1,7 +1,7 @@
 # 04-Windmills-mdinc
 # 🎯 Lernziele: Windmühlen-Projekt in Unity
 
-## 🏗 **Grundlagen von GameObjects und Hierarchie**
+## 🏗 **Grundlagen von GameObjects und Hierarchie:**
 - [x] **Whiteboxing mit Primitives**: Erstellen einer einfachen Windmühle aus grundlegenden Formen (Cubes, Cylinders).
 - [x] **Pivot-Punkt setzen**: Das Windrad als **Kind-Objekt** eines leeren GameObjects anlegen, um die Drehung korrekt zu steuern.
 
