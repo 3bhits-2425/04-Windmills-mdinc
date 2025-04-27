@@ -1,18 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class M : MonoBehaviour
 {
-    // Start is called before the first frame update
+    GameObject myObject; // myObject ist null, weil wir es nicht zugewiesen haben!
+
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        // Hier passiert der Fehler!
+        Debug.Log(myObject.name); 
+        // myObject ist null → Zugriff auf .name → NullReferenceException!
     }
 }
